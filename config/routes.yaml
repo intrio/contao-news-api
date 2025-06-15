@@ -1,0 +1,4 @@
+contao_news_api:
+  path: /api/news
+  controller: Intermediaio\ContaoNewsApi\Controller\NewsApiController::create
+  methods: [POST]
