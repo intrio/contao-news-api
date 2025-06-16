@@ -1,16 +1,22 @@
 <?php
-$GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';{newsapi_legend},newsapi_newsArchive,newsapi_publishByDefault';
+$GLOBALS['TL_DCA']['tl_settings']['palettes']['__selector__'][] = 'newsapi_activate';
+$GLOBALS['TL_DCA']['tl_settings']['palettes']['newsapi'] = '{newsapi_legend},newsapi_newsArchive,newsapi_publishByDefault';
 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['newsapi_newsArchive'] = [
   'label'             => ['News-Archiv (API)', 'Archiv, in das Beiträge per API geschrieben werden.'],
   'inputType'         => 'select',
   'options_callback'  => static function () {
-      $opts = [];
-      foreach (\Contao\NewsArchiveModel::findAll() ?? [] as $a) {
-          $opts[$a->id] = $a->title;
-      }
-      return $opts;
-  },
+    $options = [];
+    $archives = \Contao\NewsArchiveModel::findAll();
+
+    if ($archives !== null) {
+        foreach ($archives as $archive) {
+            $options[$archive->id] = $archive->title;
+        }
+    }
+
+    return $options;
+},
   'eval'              => ['mandatory'=>true,'chosen'=>true],
   'sql'               => "int(10) unsigned NOT NULL default '0'"
 ];
