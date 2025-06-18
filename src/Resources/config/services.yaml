@@ -8,3 +8,7 @@ services:
   Intermediaio\ContaoNewsApi\Controller\NewsApiController:
     public: true
     tags: ['controller.service_arguments']
+    
+test_service:
+    class: Intermediaio\ContaoNewsApi\Controller\NewsApiController
+    public: true
