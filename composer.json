@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Intermediaio\\\\ContaoNewsApi\\\\": "src/"
+      "Intermediaio\\ContaoNewsApi\\": "src/"
     }
   }
 }
