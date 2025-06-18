@@ -1,0 +1,3 @@
+intermediaio_news_api:
+  resource: '../../Controller/'
+  type: attribute
