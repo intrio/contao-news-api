@@ -6,4 +6,5 @@ services:
     autoconfigure: true
 
   Intermediaio\ContaoNewsApi\Controller\NewsApiController:
+    public: true
     tags: ['controller.service_arguments']
