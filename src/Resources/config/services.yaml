@@ -1,6 +1,10 @@
 services:
-  Intermediaio\ContaoNewsApi\Controller\NewsApiController:
-    public: true
+  Intermediaio\ContaoNewsApi\:
+    resource: '../../*'
+    exclude: '../../{Entity,Tests,DependencyInjection}'
     autowire: true
     autoconfigure: true
+
+  Intermediaio\ContaoNewsApi\Controller\NewsApiController:
+    public: true
     tags: ['controller.service_arguments']
