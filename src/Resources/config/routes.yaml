@@ -1,4 +1,4 @@
-intermediaio_news_api:
-  resource: '../../Controller/'
-  type: attribute
-  prefix: /api
+intermediaio_contao_news_api:
+  path: /api/news
+  controller: Intermediaio\ContaoNewsApi\Controller\NewsApiController
+  methods: [GET, POST]
