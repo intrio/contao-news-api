@@ -11,8 +11,8 @@
     "contao-manager-plugin": "Intermediaio\\ContaoNewsApi\\ContaoManager\\Plugin"
   },
   "autoload": {
-      "psr-4": {
-        "Intermediaio\\ContaoNewsApi\\": "src/IntermediaioContaoNewsApi/"
-      }
+    "psr-4": {
+      "Intermediaio\\ContaoNewsApi\\": "src/"
     }
+  }
 }
