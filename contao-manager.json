@@ -1,7 +1,0 @@
-{
-  "type": "composer",
-  "name": "intermediaio/contao-news-api",
-  "title": "Contao News API",
-  "description": "API‑Endpunkt für News‑Beiträge via n8n",
-  "authors": [{ "name": "intermedia.io", "email": "info@intermedia.io" }]
-}

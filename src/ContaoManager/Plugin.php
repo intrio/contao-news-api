@@ -11,8 +11,8 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create('Intermediaio\ContaoNewsApi\IntermediaioContaoNewsApiBundle')
-                ->setLoadAfter(['Contao\CoreBundle']),
+            BundleConfig::create(Intermediaio\ContaoNewsApi\IntermediaioContaoNewsApiBundle::class)
+                ->setLoadAfter([\Contao\CoreBundle\ContaoCoreBundle::class]),
         ];
     }
 }
